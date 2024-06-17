@@ -1,0 +1,48 @@
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+html {
+    // in general 1rem = 16px if not specified
+    // this defines what 1rem is
+    font-size: 62.5%;  //1 rem = 10px 10/16=62.5%
+
+    
+     
+    
+    @include respond(tab-land){
+        font-size: 56.25%;  // 1rem = 9px 9/16 =56.25%
+    }
+  
+      @include respond(tab-port){
+          font-size: 50%; // 1 rem = 8px 8/16=50%
+      }
+    
+    
+      @include respond(big-desktop){
+          font-size: 75%;       // 1 rem = 12px 12/16=75%
+      } 
+   
+
+      
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+    box-sizing: border-box;
+
+
+    @include respond(tab-port){
+        padding: 0;
+    }
+}
+
